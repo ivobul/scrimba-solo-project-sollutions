@@ -1,4 +1,4 @@
 - [Basketball Scoreboard](https://ivobul.github.io/scrimba-solo-project-sollutions/basketball-scoreboard/)
-- [Unit Converter](https://ivobul.github.io/scrimba-solo-project-sollutions/unit-conversion/)
+- [Unit Converter](https://ivobul.github.io/scrimba-solo-project-sollutions/unit-convertor/)
 - [Oldagram](https://ivobul.github.io/scrimba-solo-project-sollutions/oldagram/)
 - [Inspirational Quote Page](https://ivobul.github.io/scrimba-solo-project-sollutions/inspirational-quote-page/)
