@@ -1,0 +1,192 @@
+/* CSS Reset - A more modern and concise version 
+* Many thanks to: 
+* Josh Comeau - https://www.joshwcomeau.com/css/custom-css-reset/
+* Kevin Powell - https://youtu.be/eWmDW4zEXt4?si=S94B0BbGfmo5VZsq/
+* Andy Bell - https://piccalil.li/blog/a-more-modern-css-reset/
+* Ire Aderinokun - https://bitsofco.de/my-css-reset-base/
+*/
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body defaults rules */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Typography tweaks */
+/* Remove built-in form typography styles */
+input, 
+button, 
+textarea, 
+select {
+  font: inherit;
+}
+
+/* Typography tweaks */
+/* Avoid text overflows */
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Typography tweaks */
+/* Balance the number of words*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Reset specific element styles */
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img,
+picture, 
+video, 
+canvas, 
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+/* Basic rules */
+.page {
+  align-items: center;
+  background-color: #1C1C1C;
+  display: flex;
+  font-family: "Inter", serif;
+  justify-content: center;
+  padding: 40px 30px;
+}
+
+/* Remove Arrows/Spinners from the input number field 
+ * https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.sr-only{
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+/* App - Unit conversion */
+.app__convert {
+  align-items: center;
+  background-color: #6943FF;
+  display: flex;
+  flex-basis: 550px;
+  flex-direction: column;
+  padding: 35px 60px;
+}
+
+.app__title {
+  color: #FFFFFF;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.app__convert-input {
+  background-color: #6943FF;
+  border: 2px solid #B295FF;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+  outline: none;
+  padding: 2px 4px;
+  width: 137px;
+}
+
+.app__convert-btn {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  color: #3D3D3D;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 30px;
+  padding: 8px 12px;
+  width: 137px;
+}
+
+.app__results {
+  background-color: #1F2937;
+  padding: 35px 25px;
+}
+
+.app__results-title {
+  color: #CCC1FF;
+  font-size: 1.25rem;
+}
+
+.app__results-copy {
+  color: #FFFFFF;
+  margin-top: 10px;
+  font-size: .875rem;
+}
+
+.app__results-length,
+.app__results-volume,
+.app__results-mass {
+  background-color: #273549;
+  border-top-left-radius: 5px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.app__results-length,
+.app__results-volume {
+  margin-bottom: 20px;
+}
