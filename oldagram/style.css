@@ -1,0 +1,188 @@
+/* CSS Reset - A more modern and concise version 
+* Many thanks to: 
+* Josh Comeau - https://www.joshwcomeau.com/css/custom-css-reset/
+* Kevin Powell - https://youtu.be/eWmDW4zEXt4?si=S94B0BbGfmo5VZsq/
+* Andy Bell - https://piccalil.li/blog/a-more-modern-css-reset/
+* Ire Aderinokun - https://bitsofco.de/my-css-reset-base/
+*/
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body defaults rules */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Typography tweaks */
+/* Remove built-in form typography styles */
+input, 
+button, 
+textarea, 
+select {
+  font: inherit;
+}
+
+/* Typography tweaks */
+/* Avoid text overflows */
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Typography tweaks */
+/* Balance the number of words*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Reset specific element styles */
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img,
+picture, 
+video, 
+canvas, 
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+/* Basic rules */
+.page {
+  background-color: #F5F5F5;
+  display: flex;
+  font-family: "Source Sans 3", serif;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+/* App - Oldagram */
+.app {
+  flex-basis: 375px;
+}
+
+/* App header section - Oldagram */
+.app__header {
+  align-items: center;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #C6C6C6;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.app__header-logo {
+  height: 64px;
+}
+
+.app__header-avatar {
+  border-radius: 50%;
+  height: 34px;
+}
+
+/* App post - Oldagram */
+.app__post {
+  background-color: #FFFFFF;
+  margin-bottom: 25px;
+}
+
+/* App post top section - Oldagram */
+.app__post-top {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+}
+
+.app__post-avatar {
+  border-radius: 50%;
+  height: 34px;
+}
+
+.app__post-title {
+  font-size: .8125rem;
+}
+
+.app__post-subtitle {
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+/* App post image section - Oldagram */
+.app__post-image {
+  height: 375px;
+  object-fit: cover;
+}
+
+/* App post body section - Oldagram */
+.app__post-body {
+  font-size: .8125rem;
+  padding: 10px 16px;
+}
+
+.app__post-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.app__post-icon {
+  cursor: pointer;
+  height: 24px;
+  transition: opacity .2s;
+}
+
+.app__post-icon:hover {
+  opacity: 0.6;
+}
+
+.app__post-like-count {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.app__post-username-caption {
+  margin-top: 10px;
+}
+
+.app__post-username {
+  font-weight: bold;
+}
