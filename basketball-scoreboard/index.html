@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scoreboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page">
+    <main class="app">
+      <h1 class="app__title sr-only">Basketball Scoreboard</h1>
+      <div class="app__home">
+        <h2 class="app__home-title">Home</h2>
+        <div class="app__score">
+          <svg xmlns="http://www.w3.org/2000/svg" class="arrow-right" height="40px" viewbox="0 -960 960 960" width="40px" fill="#F94F6D"><path d="M400-280v-400l200 200-200 200Z"/></svg>
+          <h3 class="app__score-text" id="home-score">0</h3>
+        </div>
+        <div class="app__score-btns">
+          <button class="app__score-btn home-btn" type="button" data-home-points="1">+1</button>
+          <button class="app__score-btn home-btn" type="button" data-home-points="2">+2</button>
+          <button class="app__score-btn home-btn" type="button" data-home-points="3">+3</button>
+        </div>
+      </div>
+      <div class="app__guest">
+        <h2 class="app__guest-title">Guest</h2>
+        <div class="app__score">
+          <svg xmlns="http://www.w3.org/2000/svg" class="arrow-left" height="40px" viewbox="0 -960 960 960" width="40px" fill="#F94F6D"><path d="M560-280 360-480l200-200v400Z"/></svg>
+          <h3 class="app__score-text" id="guest-score">0</h3>
+        </div>
+        <div class="app__score-btns">
+          <button class="app__score-btn guest-btn" type="button" data-guest-points="1">+1</button>
+          <button class="app__score-btn guest-btn" type="button" data-guest-points="2">+2</button>
+          <button class="app__score-btn guest-btn" type="button" data-guest-points="3">+3</button>
+        </div>
+      </div>
+     <div class="app__reset">
+       <button type="button" class="app__reset-btn">New Game</button>
+      </div>
+    </main>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+/* CSS Reset - A more modern and concise version 
+* Many thanks to: 
+* Josh Comeau - https://www.joshwcomeau.com/css/custom-css-reset/
+* Kevin Powell - https://youtu.be/eWmDW4zEXt4?si=S94B0BbGfmo5VZsq/
+* Andy Bell - https://piccalil.li/blog/a-more-modern-css-reset/
+* Ire Aderinokun - https://bitsofco.de/my-css-reset-base/
+*/
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body defaults rules */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Typography tweaks */
+/* Remove built-in form typography styles */
+input, 
+button, 
+textarea, 
+select {
+  font: inherit;
+}
+
+/* Typography tweaks */
+/* Avoid text overflows */
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Typography tweaks */
+/* Balance the number of words*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Reset specific element styles */
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img,
+picture, 
+video, 
+canvas, 
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+/* Basic rules */
+.page {
+  background-color: #EEEEEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 25px;
+  background-image: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Verdana, sans-serif; 
+}
+
+@font-face {
+  font-family: 'Cursed Timer ULiL';
+  src: url(fonts/CursedTimerUlil-Aznm.ttf);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* App */
+.app {
+  align-items: center;
+  background-color: #1B244A;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  padding: 40px 30px;
+}
+
+.app__title {
+  color: #EEEEEE;
+}
+
+.arrow-right {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.arrow-left {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.app__home-title,
+.app__guest-title {
+  color: #EEEEEE;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.app__score {
+  background-color: #080001;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: .5rem 1rem 0;
+  position: relative;
+}
+
+.app__score-text {
+  color: #F94F6D;
+  font-size: 3rem;
+  font-family: 'Cursed Timer ULiL', sans-serif;
+}
+
+.app__score-btns {
+  display: flex;
+  font-family: 'Cursed Timer ULiL', sans-serif;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0 6px;
+}
+
+.app__score-btn {
+  background-color: #1B244A;
+  border: 2px solid #9AABD8;
+  border-radius: 5px;
+  color: #9AABD8;
+  cursor: pointer;
+  flex: 1;
+  font-weight: bold;
+  padding: 8px;
+  transition: background-color .3s;
+}
+
+.app__score-btn:hover {
+  background-color: #31395c;
+}
+
+.app__reset {
+  display: flex;
+  flex: 100%;
+  justify-content: center;
+}
+
+.app__reset-btn {
+  background-color: #1B244A;
+  border: 2px solid #9AABD8;
+  border-radius: 5px;
+  color: #EEEEEE;
+  cursor: pointer;
+  font-size: .875rem;
+  font-weight: bold;
+  padding: 10px 18px;
+  text-transform: uppercase;
+  transition: background-color .3s;
+}
+
+.app__reset-btn:hover {
+  background-color: #31395c;
+}
+
+@media (max-width: 767px) {
+  .app {
+    gap: 70px;
+  }
+  
+  .app__home-title,
+  .app__guest-title {
+    font-size: 2.5rem
+  }
+}
