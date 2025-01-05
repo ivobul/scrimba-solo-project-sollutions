@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page">
+    <main class="app">
+      <div class="app__wrapper">
+        <h1 class="app__title"><span class="color-white">Generate a</span><span class="color-green"> random password</span></h1>
+        <p class="app__copy">Never use an insecure password again.</p>
+        
+        <div class="app__inp-box">
+          Length: <label for="length" class="app__inp-label"></label>
+          <input type="range" min="8" max="32" name="length" value="8" id="length" class="app__inp-range">
+        </div>
+        
+        <div class="app__inp-box">
+          <input type="checkbox" id="numbers" class="app__inp-checkbox" name="numbers" checked>
+          <label for="numbers">Numbers</label>
+        </div>
+
+        <div class="app__inp-box">
+          <input type="checkbox" id="special-chars" class="app__inp-checkbox" name="special-chars" checked>
+          <label for="special-chars">Special Characters</label>
+        </div>
+        <button class="app__btn" type="button">Generate passwords</button>
+        <div class="app__horizontal-line"></div>
+        <div class="app__passwords">
+          <label for="pass1" class="sr-only color-white">Password</label>
+          <input type="text" id="pass1" class="app__password" name="pass1" value="" readonly>
+          <label for="pass2" class="sr-only color-white">Password</label>
+          <input type="text" id="pass2" class="app__password" name="pass2" value="" readonly>
+        </div>
+      </div>
+    </main>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
