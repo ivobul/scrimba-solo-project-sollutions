@@ -28,11 +28,12 @@ window.addEventListener("load", () => {
 // Copy the password to the clipboard
 passBoxes.forEach((item) => {
   item.addEventListener("click", async(e) => {
-    await navigator.clipboard.writeText(e.target.value);
-    alert(`Copied password: ${e.target.value}`);
+    if (e.target.value) {
+      await navigator.clipboard.writeText(e.target.value);
+      alert(`Copied password: ${e.target.value}`);
+    }
   })
 })
-
 
 btnElem.addEventListener("click", () => {
   passBoxes.forEach((item) => {
