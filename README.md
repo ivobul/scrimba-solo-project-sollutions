@@ -1,3 +1,4 @@
+- [Hometown Homepage](https://ivobul.github.io/scrimba-solo-project-sollutions/hometown-homepage/)
 - [Basketball Scoreboard](https://ivobul.github.io/scrimba-solo-project-sollutions/basketball-scoreboard/)
 - [Password Generator](https://ivobul.github.io/scrimba-solo-project-sollutions/password-generator/)
 - [Unit Converter](https://ivobul.github.io/scrimba-solo-project-sollutions/unit-convertor/)
