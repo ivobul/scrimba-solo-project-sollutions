@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send to Pager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page">
+    <main class="app">
+      <h1 class="sr-only">Send to pager</h1>
+      <div class="app__pager">
+        <h2 class="app__pager-title">Pager</h2>
+        <label for="pager" class="sr-only color-white">Pager</label>
+        <input type="text" id="pager" class="app__pager-inp" name="pager" value="" readonly>
+      </div>
+      
+      <div class="app__phone">
+        <h2 class="app__phone-title">Phone</h2>
+        <label for="phone" class="sr-only">Phone</label>
+        <input type="text" id="phone" class="app__phone-inp" name="phone" value="" readonly>
+        
+        <div class="app__phone-buttons">
+          <div class="app__phone-row">
+            <button type="button" class="app__phone-key-btn">1</button>
+            <button type="button" class="app__phone-key-btn">2</button>
+            <button type="button" class="app__phone-key-btn">3</button>
+          </div>
+          
+          <div class="app__phone-row">
+            <button type="button" class="app__phone-key-btn">4</button>
+            <button type="button" class="app__phone-key-btn">5</button>
+            <button type="button" class="app__phone-key-btn">6</button>
+          </div>
+          
+          <div class="app__phone-row">
+            <button type="button" class="app__phone-key-btn">7</button>
+            <button type="button" class="app__phone-key-btn">8</button>
+            <button type="button" class="app__phone-key-btn">9</button>
+          </div>
+          
+          <div class="app__phone-row">
+            <button type="button" class="app__phone-key-btn">*</button>
+            <button type="button" class="app__phone-key-btn">0</button>
+            <button type="button" class="app__phone-key-btn">#</button>
+          </div>
+        </div>
+        
+        <button type="button" class="app__phone-reset-btn">Reset</button>
+        <button type="button" class="app__phone-send-btn">Send</button>
+      </div>
+    </main>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+/* CSS Reset - A more modern and concise version 
+* Many thanks to: 
+* Josh Comeau - https://www.joshwcomeau.com/css/custom-css-reset/
+* Kevin Powell - https://youtu.be/eWmDW4zEXt4?si=S94B0BbGfmo5VZsq/
+* Andy Bell - https://piccalil.li/blog/a-more-modern-css-reset/
+* Ire Aderinokun - https://bitsofco.de/my-css-reset-base/
+*/
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body defaults rules */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Typography tweaks */
+/* Remove built-in form typography styles */
+input, 
+button, 
+textarea, 
+select {
+  font: inherit;
+}
+
+/* Typography tweaks */
+/* Avoid text overflows */
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Typography tweaks */
+/* Balance the number of words*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Reset specific element styles */
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img,
+picture, 
+video, 
+canvas, 
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+/* Basic rules */
+:root {
+  --pager-phone-padding: 25px 30px;
+  --pager-phone-title-fontsize: 2rem;
+  --pager-phone-input-fontsize: 2.3rem;
+  --pager-phone-input-padding: 0 10px;
+  --reset-send-buttons-padding: 0 22px;
+  --pager-phone-input-height: 100px;
+  --buttons-fontsize: 1.6rem;
+  --buttons-height: 74px;
+}
+
+.page {
+  align-items: center;
+  background-color: #FFFFFF;
+  display: flex;
+  font-family: "Press Start 2P", serif;
+  justify-content: center;
+  padding: 35px 20px;
+}
+
+.sr-only{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.color-white {
+  color: #F8F8F8;
+}
+
+/* App */
+.app {
+  flex-basis: 700px;
+}
+
+/* App pager section */
+.app__pager {
+  background-color: #283033;
+  padding: var(--pager-phone-padding, 25px);
+}
+
+.app__pager-title {
+  color: #F8F8F8;
+  font-size: var(--pager-phone-title-fontsize);
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.app__pager-inp {
+  background-color: #9EC4B3;
+  border: none;
+  color: #000000;
+  display: block;
+  font-size: var(--pager-phone-input-fontsize);
+  height: var(--pager-phone-input-height);
+  padding: var(--pager-phone-input-padding, 0);
+  text-align: center;
+  width: 100%;
+}
+
+.app__pager-inp:focus {
+  outline: 1px dotted gray;
+}
+
+/* App phone section */
+.app__phone {
+  background-color: #D9D9D9;
+  margin-top: 60px;
+  padding: var(--pager-phone-padding, 25px);
+}
+
+.app__phone-title {
+  color: #000000;
+  font-size: var(--pager-phone-title-fontsize);
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.app__phone-inp {
+  background-color: #444444;
+  color: #F8F8F8;
+  border: none;
+  display: block;
+  font-size: var(--pager-phone-input-fontsize);
+  height: var(--pager-phone-input-height);
+  padding: var(--pager-phone-input-padding, 0);
+  text-align: center;
+  width: 100%;
+}
+
+.app__phone-inp:focus {
+  outline: 1px dotted gray;
+}
+
+/* App phone buttons section */
+.app__phone-buttons {
+  margin: 20px 0;
+}
+
+.app__phone-row {
+  display: flex;
+  gap: 20px;
+}
+
+.app__phone-row:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.app__phone-key-btn {
+  background-color: #F8F8F8;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  flex: 1;
+  font-size: var(--buttons-fontsize);
+  height: var(--buttons-height);
+  transition: 0.3s all;
+}
+
+.app__phone-key-btn:active {
+  transform: scale(0.88);  
+}
+
+/* App phone send reset buttons section */
+.app__phone-reset-btn {
+  background-color: #BE482A;
+  border: 3px solid #000000;
+  color: #F8F8F8;
+  cursor: pointer;
+  display: block;
+  font-size: var(--buttons-fontsize);
+  height: var(--buttons-height);
+  margin-bottom: 15px;
+  padding: var(--reset-send-buttons-padding, 0);
+  text-transform: uppercase;
+  transition: 0.3s all;
+  width: 100%;
+}
+
+.app__phone-reset-btn:active {
+  transform: scale(0.90); 
+}
+
+.app__phone-send-btn  {
+  background-color: #3D9C7C;
+  border: 3px solid #000000;
+  color: #000000;
+  cursor: pointer;
+  display: block;
+  font-size: var(--buttons-fontsize);
+  height: var(--buttons-height);
+  padding: var(--reset-send-buttons-padding, 0);
+  text-transform: uppercase;
+  transition: 0.3s all;
+  width: 100%;
+}
+
+.app__phone-send-btn:active {
+  transform: scale(0.90); 
+}
+
+@media (max-width: 767px) {
+  :root {
+    --pager-phone-padding: 25px;
+    --pager-phone-title-fontsize: 1.5rem;
+    --pager-phone-input-fontsize: .875rem;
+    --pager-phone-input-height: 60px;
+    --buttons-fontsize: 1rem;
+    --buttons-height: 54px;
+  }
+}
