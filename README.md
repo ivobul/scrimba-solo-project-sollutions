@@ -4,3 +4,4 @@
 - [Unit Converter](https://ivobul.github.io/scrimba-solo-project-sollutions/unit-convertor/)
 - [Oldagram](https://ivobul.github.io/scrimba-solo-project-sollutions/oldagram/)
 - [Inspirational Quote Page](https://ivobul.github.io/scrimba-solo-project-sollutions/inspirational-quote-page/)
+- [Send to Pager](https://ivobul.github.io/scrimba-solo-project-sollutions/send-to-pager/)
