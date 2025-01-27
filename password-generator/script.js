@@ -6,9 +6,12 @@ const lowerLetters = characters.slice(characters.indexOf("a"), characters.indexO
 const numbers = characters.slice(characters.indexOf("0"), characters.indexOf("~"))
 const specialChars = characters.slice(characters.indexOf("~"))
 
-const charactersNoNums = [... upperLetters, ... lowerLetters, ... specialChars]
-const charactersNoSpecialChars = [... upperLetters, ... lowerLetters, ... numbers]
-const charactersOnlyLetters = [... upperLetters, ... lowerLetters]
+const noNumsChars = [... upperLetters, ... lowerLetters, ... specialChars]
+const onlyNumsChars = [... numbers]
+const noSpecialChars = [... upperLetters, ... lowerLetters, ... numbers]
+const onlySpecialChars = [... specialChars]
+const onlyLettersChars = [... upperLetters, ... lowerLetters]
+const noLettersChars = [... numbers, ... specialChars]
 
 let passLength = 0
 let currPass = ""
@@ -19,6 +22,7 @@ const lengthElem = document.querySelector("#length")
 const inpLabelElem = document.querySelector(".app__inp-label")
 const checkNumbersElem = document.querySelector("#numbers")
 const checkSpecialCharsElem = document.querySelector("#special-chars")
+const checkLettersElem = document.querySelector("#letters")
 
 window.addEventListener("load", () => {
   passLength = lengthElem.value
@@ -49,38 +53,62 @@ lengthElem.addEventListener("input", () => {
 function generatePass() {
   let newPass = ""
 
-  if (checkNumbersElem.checked && checkSpecialCharsElem.checked) {
+  if (checkNumbersElem.checked && checkSpecialCharsElem.checked && checkLettersElem.checked) {
     generateAllChars()
       
     while(currPass.length < passLength) {
       currPass += characters[Math.floor(Math.random() * characters.length)]
     }
   }
-    
-  else if (!checkNumbersElem.checked && !checkSpecialCharsElem.checked) {
-    generateOnlyLetters()
-      
-    while(currPass.length < passLength) {
-      currPass += charactersOnlyLetters[Math.floor(Math.random() * charactersOnlyLetters.length)]
-    }
-  }
-    
-  else if (!checkNumbersElem.checked) {
-    generateNoNumsChars()
-      
-    while(currPass.length < passLength) {
-      currPass += charactersNoNums[Math.floor(Math.random() * charactersNoNums.length)]
-    }
-  }
-    
-  else if (!checkSpecialCharsElem.checked) {
-    generateNoSpecialChars()
-      
-    while(currPass.length < passLength) {
-      currPass += charactersNoSpecialChars[Math.floor(Math.random() * charactersNoSpecialChars.length)]
-    }
+  
+  else if (!checkNumbersElem.checked && !checkSpecialCharsElem.checked && checkLettersElem.checked) {
+	generateOnlyLettersChars()
+	  
+	while(currPass.length < passLength) {
+	  currPass += onlyLettersChars[Math.floor(Math.random() * onlyLettersChars.length)]
+    }  
   }
   
+  else if (checkNumbersElem.checked && checkSpecialCharsElem.checked && !checkLettersElem.checked) {
+	generateNoLettersChars()
+	  
+	while(currPass.length < passLength) {
+	  currPass += noLettersChars[Math.floor(Math.random() * noLettersChars.length)]
+    }  
+  }
+  
+  else if (checkNumbersElem.checked && !checkSpecialCharsElem.checked && !checkLettersElem.checked) {
+	generateOnlyNumsChars()
+	  
+	while(currPass.length < passLength) {
+	  currPass += onlyNumsChars[Math.floor(Math.random() * onlyNumsChars.length)]
+    }  
+  }
+  
+  else if (!checkNumbersElem.checked && checkSpecialCharsElem.checked && checkLettersElem.checked) {
+	generateNoNumsChars()
+	  
+	while(currPass.length < passLength) {
+	  currPass += noNumsChars[Math.floor(Math.random() * noNumsChars.length)]
+    }  
+  }
+  
+  else if (!checkNumbersElem.checked && checkSpecialCharsElem.checked && !checkLettersElem.checked) {
+	generateOnlySpecialChars()
+	  
+	while(currPass.length < passLength) {
+	  currPass += onlySpecialChars[Math.floor(Math.random() * onlySpecialChars.length)]
+    }  
+  }
+  
+  else if (checkNumbersElem.checked && !checkSpecialCharsElem.checked && checkLettersElem.checked) {
+	generateNoSpecialChars()
+	  
+	while(currPass.length < passLength) {
+	  currPass += noSpecialChars[Math.floor(Math.random() * noSpecialChars.length)]
+    }  
+  }
+    
   newPass = currPass
   currPass = ""
   
@@ -96,9 +124,21 @@ function generateAllChars() {
   return currPass
 }
 
-function generateOnlyLetters() {
+function generateOnlyLettersChars() {
   currPass += upperLetters[Math.floor(Math.random() * upperLetters.length)]
   currPass += lowerLetters[Math.floor(Math.random() * lowerLetters.length)]
+  
+  return currPass
+}
+
+function generateNoLettersChars() {
+  currPass += numbers[Math.floor(Math.random() * numbers.length)]
+  currPass += specialChars[Math.floor(Math.random() * specialChars.length)]
+  return currPass
+}
+
+function generateOnlyNumsChars() {
+  currPass += numbers[Math.floor(Math.random() * numbers.length)]
   
   return currPass
 }
@@ -106,6 +146,12 @@ function generateOnlyLetters() {
 function generateNoNumsChars() {
   currPass += upperLetters[Math.floor(Math.random() * upperLetters.length)]
   currPass += lowerLetters[Math.floor(Math.random() * lowerLetters.length)]
+  currPass += specialChars[Math.floor(Math.random() * specialChars.length)]
+  
+  return currPass
+}
+
+function generateOnlySpecialChars() {
   currPass += specialChars[Math.floor(Math.random() * specialChars.length)]
   
   return currPass
